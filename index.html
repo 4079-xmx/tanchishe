@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#111827">
+    <title>贪吃蛇</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app" aria-label="贪吃蛇小游戏">
+      <section class="game-shell">
+        <header class="topbar">
+          <div>
+            <h1>贪吃蛇</h1>
+            <p class="status" id="status">按开始进入游戏</p>
+          </div>
+          <div class="scores" aria-label="分数">
+            <div>
+              <span>分数</span>
+              <strong id="score">0</strong>
+            </div>
+            <div>
+              <span>最佳</span>
+              <strong id="bestScore">0</strong>
+            </div>
+          </div>
+        </header>
+
+        <div class="board-wrap">
+          <canvas id="gameCanvas" width="640" height="640" aria-label="游戏区域"></canvas>
+          <div class="overlay" id="overlay">
+            <strong id="overlayTitle">准备开始</strong>
+            <span id="overlayText">用方向键、WASD、滑动或下方按钮控制方向</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="primary" id="startBtn" type="button">开始</button>
+          <button id="pauseBtn" type="button">暂停</button>
+          <button id="restartBtn" type="button">重开</button>
+        </div>
+
+        <div class="touch-pad" aria-label="触摸方向控制">
+          <span></span>
+          <button id="upBtn" type="button" aria-label="向上">▲</button>
+          <span></span>
+          <button id="leftBtn" type="button" aria-label="向左">◀</button>
+          <button id="downBtn" type="button" aria-label="向下">▼</button>
+          <button id="rightBtn" type="button" aria-label="向右">▶</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
